@@ -31,6 +31,12 @@ class ClimateServiceTest extends AnyFunSuite {
 
   //@TODO
   test("filterDecemberData") {
-    assert(true == false)
+    val firstRecord = (2003, 1, 355.2) //help: to acces 2003 of this tuple, you can do firstRecord._1
+    val secondRecord = (2004, 12, 375.2)
+    val list1 = List(firstRecord, secondRecord)
+    val listexpected = (2003, 1, 355.2)
+
+      assert( ClimateService.filterDecemberData(list1) == listexpected)
+
   }
 }
